@@ -4,6 +4,8 @@ from logger import log_state
 
 def main():
     pygame.init()
+    Clock = pygame.time.Clock()
+    dt = 0
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
     while 0 < 1:
@@ -13,6 +15,9 @@ def main():
                 return
         screen.fill("black")
         pygame.display.flip()
+        Clock.tick(60)
+        dt = Clock.tick(60) / 1000
+        #print(dt)
 
 
 
